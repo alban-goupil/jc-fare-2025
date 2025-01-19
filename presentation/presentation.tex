@@ -17,8 +17,8 @@
 \DeclareMathOperator*{\argmin}{arg\ min}
 
 
-\title{Journées Jeunes Chercheuses/Chercheurs de FARE}
-\subtitle{Ateliers?}
+\title{Journée Jeunes Chercheuses/Chercheurs de FARE}
+\subtitle{Ateliers (?)}
 \date{20 janvier 2025}
 \author{Alban Goupil}
 \institute{%
@@ -35,7 +35,7 @@
 
 \begin{frame}{Problématique}
   \begin{itemize}
-  \item Surveillance à grande échelle de l'évolution des jaunisse
+  \item Surveillance à grande échelle de l'évolution des jaunisses
   \item Flavescence Dorée
     \begin{itemize}
     \item Propagation rapide
@@ -60,7 +60,7 @@
         \end{itemize}
       \item Systèmes embarqués
         \begin{itemize}
-        \item Transport sur nacelle/drone
+        \item Transport sur nacelle / drone
         \item Mécatronique / robotique
         \end{itemize}
       \end{itemize}
@@ -86,10 +86,10 @@
   \hfill
   \includegraphics[height=4cm]{spectro}
   \begin{itemize}
-  \item Spectres Vis+NIR allant de 350nm à 1350nm
+  \item Spectres Vis + NIR allant de 350nm à 1350nm
   \item 2 spectres / feuilles
   \item Acquisitions de 2019 à 2024
-  \item $\approx150$ spectres sur 5 zones avec 5 classes en 2022
+  \item $\approx150$ ceps sur 5 zones avec 5 classes en 2022
   \end{itemize}
 \end{frame}
 
@@ -123,7 +123,8 @@
   \item Prétraitements
   \end{itemize}
 
-  Lien vers le notebook
+  \href{https://github.com/alban-goupil/jc-fare-2025/blob/main/notebooks/1-prise-en-main.ipynb}{Notebook
+    pour la prise en main}
 \end{frame}
 
 
@@ -138,7 +139,8 @@
     \end{itemize}
   \end{block}
 
-  Lien vers le notebook
+  \href{https://github.com/alban-goupil/jc-fare-2025/blob/main/notebooks/2-classifieurs.ipynb}{Notebook
+    sur la classification}
 \end{frame}
 
 
@@ -192,7 +194,7 @@
       \text{renard}) = 20\%$
     \item $p(\text{"Il était une"}, \text{"fois"}) = 80\%$
     \item $p(\text{"Le plus grand groupe de rock est"}, \text{"Rolling
-        Stones"}) = 5\%$
+        Stones"}) = 0.1\%$
     \end{itemize}
   \end{block}
 \end{frame}
@@ -242,7 +244,7 @@
   \end{align*}
 \end{frame}
 
-\begin{frame}{Exemples}
+\begin{frame}{Exemple}
   \begin{block}{Générateur de texte}
     \begin{itemize}
     \item Basé sur fréquences des $n$-grammes
@@ -256,7 +258,9 @@
 
   \begin{block}{Liens externes}
     \begin{itemize}
-    \item Notebook du générateur
+    \item
+      \href{https://github.com/alban-goupil/jc-fare-2025/blob/main/notebooks/3-modele-generateur.ipynb}{Notebook
+        sur un générateur de texte}
     \item \href{https://www.inference.org.uk/dasher}{Dasher: un modèle
         prédictif pour l'écriture rapide}
     \end{itemize}
@@ -298,7 +302,7 @@
 \end{frame}
 
 
-\begin{frame}{Malédiction de la dimension}
+\begin{frame}[squeeze]{Malédiction de la dimension}
   \begin{block}{Pavage}
     \begin{itemize}
     \item Un point ``couvre'' un rayon de $\epsilon=0.1$
@@ -306,32 +310,29 @@
       longueur 1
     \item Il faut $\approx100$ points pour couvrir le carré de côté 1
     \item Il faut $\approx1000$ points pour couvrir le cube de côté 1
-    \item Il faut plus de $\epsilon^d\left[\frac d{2\pi
+    \item Il faut plus de $\epsilon^{-d}\left[\frac d{2\pi
           e}\right]^{d/2}$ points dans un hypercube de côté 1
+    \item \alert{Réponse: concentration de la mesure}
     \end{itemize}
   \end{block}
 
   \begin{columns}
     \column{.8\textwidth}
-    \begin{block}{Autres phénomènes de la dimension}
+    \begin{block}{Autres phénomènes de la dimension
+        \href{https://github.com/alban-goupil/jc-fare-2025/blob/main/notebooks/4-dimension.ipynb}{(notebook
+          illustratif)}}
       \begin{itemize}
-      \item Tout l'espace est loin des données:
+      \item Tout l'espace est loin des données
         \begin{itemize}
         \item ``Dans l'(hyper)-espace personne ne vous entend crier.''
         \end{itemize}
       \item Toutes les directions sont orthogonales
-      \item Durcissement des sphères / toutes la masse est
-        à l'équateur
+      \item Durcissement des sphères / toute la masse est à l'équateur
       \end{itemize}
     \end{block}
     \column{.18\textwidth}
     \includegraphics[width=\textwidth]{spiked-ball}
   \end{columns}
-\end{frame}
-
-
-\begin{frame}{Illustrations numériques}
-  Lien vers le notebook
 \end{frame}
 
 
@@ -350,13 +351,11 @@
       \begin{itemize}
       \item \href{https://doi.org/10.1098/rsta.2018.0145}{Succi, Coveney, 2019, Big data: the end of the scientific method?}
       \end{itemize}
+    \item
+      \href{https://github.com/alban-goupil/jc-fare-2025/blob/main/notebooks/5-observations.ipynb}{Notebook
+        illustratif}
     \end{itemize}
   \end{block}
-\end{frame}
-
-
-\begin{frame}{Exemple numérique}
-  Lien vers le notebook
 \end{frame}
 
 
@@ -371,7 +370,7 @@
     \item $R(.)$: Erreur de généralisation
     \item $\mathcal H$: ensemble des estimateurs possibles
     \item $f_I$: meilleur estimateur avec toutes les données possibles
-      et imaginable
+      et inimaginables
     \item $\tilde f$: meilleur estimateur avec les données
     \end{itemize}
     \column{.4\textwidth}
